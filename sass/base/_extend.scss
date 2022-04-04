@@ -1,0 +1,13 @@
+
+
+%bgShadow{
+    box-shadow: 0px 0px 37px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 37px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 37px -10px rgba(0,0,0,0.75);
+}
+
+%flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

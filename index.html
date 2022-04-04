@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="keywords" content="">
     <title>Document</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
                 <div class="header__row__search">
                     <input type="text" placeholder="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                </div> 
                 <div class="header__row__title">
                     <h1>Spicely.</h1>
                     <p>Organics</p>
@@ -28,7 +29,10 @@
                 </div>
             </div>
             <nav class="header__nav">
-                <ul>
+                <div class="header__icon__container">
+                    <i class="fa-solid fa-bars header__nav__icon"></i>
+                </div>
+                <ul class="header__nav__ul">
                     <li><a href="#">INICIO</a></li>
                     <li><a href="#">MENU</a></li>
                     <li><a href="#">NOSOTROS</a></li>
@@ -38,8 +42,20 @@
         </div>
     </header>
 
+    <main class="index__main">
+        <section class="index__separator">
+            <div>
+                <img src="./img/bowl-3254498_640.png" alt="">
+                <img src="./img/broccoli-1450274_640.png" alt="">
+                <img src="./img/salad-4252467_640.png" alt="">
+            </div>
+        </section>
+    </main>
+
 
     <!-- SCRIPTS -->
     <script src="https://kit.fontawesome.com/a6528d3960.js" crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
