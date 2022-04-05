@@ -6,6 +6,10 @@
     -moz-box-shadow: 0px 0px 37px -10px rgba(0,0,0,0.75);
 }
 
+%boxShadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 %flexCenter{
     display: flex;
     justify-content: center;
@@ -21,4 +25,8 @@
 %containerLg{
     max-width: 992px;
     margin: auto;
+}
+
+%textShadow{
+    text-shadow: 1px 1px #000000;
 }

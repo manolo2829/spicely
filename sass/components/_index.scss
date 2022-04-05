@@ -4,41 +4,222 @@
 
 #index{
     .index__separator{
-        div{
-            @extend %flexBetween;
-            flex-wrap: wrap;
-            padding-top: 50px;
-            img{
-                width: 250px;
+        @extend %containerLg;
+        background-image: url('../img/asparagus-2169305_640.jpg');
+        background-position: center;
+        background-size: cover;
+        a{
+            text-decoration: none;
+            .separator__container{
+                height: 300px;
+                @extend %flexCenter;
+                background-color: $bg-black2;
+                color: $color-white;
+                transition: all .5s;
+                p{
+                    border: 2px dashed $color-white;
+                    padding: 10px 20px;
+                }
+    
+                &:hover{
+                    background-color: $bg-white;
+                    color: $color-black;
+                }
+    
+                &:hover > p{
+                    border: 2px dashed $color-black;
+                }
+    
             }
         }
     }
 
     .index__menu{
         @extend %containerLg;
-        display: flex;
         background-color: $color-white;
-        padding: 20px;
-        
-        .menu__container{
-            width: 70%;
+        .menu__head{
+            padding: 20px;
+            text-align: center;
+            // filter: blur(8px);
+            // -webkit-filter: blur(8px);
             h2{
-                font-weight: normal;
-                span{
-                    font-weight: bold;
-                }
+                font-size: $fz-title;
+                padding: 10px 0;
+            }
+            h3{
+                color: $color-green;
+                padding: 10px 0;
+                
             }
 
-            .menu__dia{
-                width: 100%;
-                height: 250px;
-                background-image: url('../img/asparagus-2169305_640.jpg');
-                background-position: center;
-                background-size: cover;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+        }
+        .menu__container{
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            @media (min-width: 992px) {
+                flex-direction: row;
+
+                .container__cards{
+                    width: 80%;
+                }
+
+                .menu__sidenav{
+                    box-shadow: none;
+                    width: 18%;
+                    .sidenav__ul{
+                        li{
+                            
+                            i{
+                                display: none;
+                            }
+                            ul{
+                                display: flex;
+                            }
+                        }
+                    }
+                }
             }
+            .container__cards{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+
+                @media (min-width: 600px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media (min-width: 992px) {
+                    grid-template-columns:1fr 1fr 1fr;
+                }
+                .container__card{
+                    width: 100%;
+                    height: 350px;
+                    
+                    &:hover > .card__img .img__fondo{
+                        opacity: 1;
+                    }
+
+                    
+                    &:hover >  .card__body > button{
+                        background-color: $color-golden;
+                    }
+
+                    .card__img{
+                        position: relative;
+                        height: 70%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            @extend %boxShadow;
+
+                        }
+
+                        .img__fondo{
+                            opacity: 0;
+                            position: absolute;
+                            background-color: $bg-golden;
+                            width: 100%;
+                            height: 100%;
+                            @extend %flexCenter;
+                            transition: all 1s;
+
+                            
+
+                            .img__text__container{
+                                width: 85%;
+                                height: 85%;
+                                border: 2px dashed $color-white;
+                                @extend %flexCenter;
+                                div{
+                                    width: 50%;
+                                    height: 50%;
+                                    background-color: $bg-black2;
+                                    border-radius: 5px;
+                                    @extend %flexCenter;
+                                    flex-direction: column;
+                                    color: $color-white;
+                                    h4{
+                                        font-size: 22px;
+                                    }
+                                    p{
+                                        align-self: flex-end;
+                                        padding: 0 15px;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .card__body{
+                        height: 30%;
+                        padding: 10px 0;
+                        h5{
+                            font-size: 18px;
+                        }
+
+                        button{
+                            transition: all 1s;
+                            margin: 20px 0;
+                            background: transparent;
+                            border: 1px solid #000;
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .menu__sidenav{
+            background-color: $bg-white;
+            @extend %boxShadow;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+
+            .sidenav__ul{
+                list-style: none;
+                height: 100%;
+                li{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    @extend %flexCenter;
+                    a{
+                        text-decoration: none;
+                        color: $color-black;
+                        padding: 0 10px;
+                    }
+                    ul{
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 50px;
+                        width: 100%;
+                        height: 300px;
+                        background-color: $bg-white;
+                        li{
+                            &:hover{
+                                background-color: $color-green;
+                            }
+
+                            &:hover > a{
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+                &:hover > li > ul{
+                    display: flex;
+                }
+            }
+            
         }
     }
 }
