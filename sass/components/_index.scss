@@ -68,10 +68,14 @@
                 }
 
                 .menu__sidenav{
+                    position: sticky;
+                    top: 0;
                     box-shadow: none;
                     width: 18%;
                     .sidenav__ul{
                         li{
+
+                            
                             
                             i{
                                 display: none;

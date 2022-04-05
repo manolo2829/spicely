@@ -252,6 +252,8 @@ body {
     width: 80%;
   }
   #index .index__menu .menu__container .menu__sidenav {
+    position: sticky;
+    top: 0;
     box-shadow: none;
     width: 18%;
   }
