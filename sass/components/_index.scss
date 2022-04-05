@@ -1,10 +1,44 @@
+@import '../base/extend';
+@import '../base/variables';
 
-.index__main{
+
+#index{
     .index__separator{
-        width: 100%;
+        div{
+            @extend %flexBetween;
+            flex-wrap: wrap;
+            padding-top: 50px;
+            img{
+                width: 250px;
+            }
+        }
+    }
+
+    .index__menu{
+        @extend %containerLg;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+        background-color: $color-white;
+        padding: 20px;
+        
+        .menu__container{
+            width: 70%;
+            h2{
+                font-weight: normal;
+                span{
+                    font-weight: bold;
+                }
+            }
+
+            .menu__dia{
+                width: 100%;
+                height: 250px;
+                background-image: url('../img/asparagus-2169305_640.jpg');
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
     }
 }

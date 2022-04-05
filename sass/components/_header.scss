@@ -2,8 +2,7 @@
 @import '../base/extend';
 
 .header{
-    max-width: 992px;
-    margin: auto;
+    @extend %containerLg;
     background: $color-white;
     @extend %bgShadow;
 
@@ -33,9 +32,7 @@
             .header__row__search{
                 grid-row: 1/2;
                 grid-column: 1/2;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend %flexCenter;
                 border-bottom: 1px solid #000;
                 padding: 5px 2px;
                 input{
@@ -66,9 +63,7 @@
 
             .header__row__log{
                 grid-column: 2/3;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @extend %flexCenter;
                 a{
                     text-decoration: none;
                     padding: 0 5px;

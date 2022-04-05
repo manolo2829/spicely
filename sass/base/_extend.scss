@@ -11,3 +11,14 @@
     justify-content: center;
     align-items: center;
 }
+
+%flexBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%containerLg{
+    max-width: 992px;
+    margin: auto;
+}
